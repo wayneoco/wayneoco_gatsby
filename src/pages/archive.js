@@ -23,7 +23,7 @@ const Archive = ({ data, location, pageContext }) => {
                     <ul className="archive-tags-list">
                         {tags.map(({ node }) => (
                             <li key={node.id}>
-                                <Link to={node.url}>{node.name}</Link>
+                                <Link to={`../tag/${node.slug}`}>{node.name}</Link>
                                 <span className="tag-count">({node.count.posts})</span>
                             </li>
                         ))}
