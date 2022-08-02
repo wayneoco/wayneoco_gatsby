@@ -1,10 +1,10 @@
 {
   "development": {
-    "apiUrl": "http://localhost:2368",
-    "contentApiKey": "6f987de0a0d1da6aedf670a6d0"
+    "apiUrl": "https://wayneo.co",
+    "contentApiKey": "48fa1ef3e3014ca6b9c249a098"
   },
   "production": {
-    "apiUrl": "http://localhost:2368",
-    "contentApiKey": "6f987de0a0d1da6aedf670a6d0"
+    "apiUrl": "https://wayneo.co",
+    "contentApiKey": "48fa1ef3e3014ca6b9c249a098"
   }
 }
