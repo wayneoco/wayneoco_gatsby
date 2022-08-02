@@ -9,7 +9,7 @@ import { NavButton } from ".";
 import { Navigation } from ".";
 import config from "../../utils/siteConfig";
 
-import signature from "../../images/wayneoco_signature.png";
+import signature from "../../images/wayneoco_sig.png";
 
 import Prism from "prismjs";
 
