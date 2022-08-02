@@ -1,10 +1,10 @@
 {
   "development": {
-    "apiUrl": "http://143.198.128.232",
+    "apiUrl": "https://www.wayneoco.net",
     "contentApiKey": "5aa99dedb2681927c54e89891c"
   },
   "production": {
-    "apiUrl": "http://143.198.128.232",
+    "apiUrl": "https://www.wayneoco.net",
     "contentApiKey": "5aa99dedb2681927c54e89891c"
   }
 }
