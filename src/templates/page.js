@@ -24,12 +24,20 @@ const Page = ({ data, location }) => {
             <Layout>
                 <div className="container">
                     <article className="content">
+                        {page.feature_image ? (
+                            <figure className="post-feature-image">
+                                <img
+                                    src={page.feature_image}
+                                    alt={page.title}
+                                />
+                            </figure>
+                        ) : null}
                         <h1 className="content-title">{page.title}</h1>
 
                         {/* The main page content */}
                         <section
                             className="content-body load-external-scripts"
-                            dangerouslySetInnerHTML={{ __html: page.html }}
+                            dangerouslySetInnerHTML={{ __html: page.childHtmlRehype.html }}
                         />
                     </article>
                 </div>
@@ -44,6 +52,9 @@ Page.propTypes = {
             codeinjection_styles: PropTypes.object,
             title: PropTypes.string.isRequired,
             html: PropTypes.string.isRequired,
+            childHtmlRehype: PropTypes.shape({
+                html: PropTypes.string.isRequired,
+            }),
             feature_image: PropTypes.string,
         }).isRequired,
     }).isRequired,

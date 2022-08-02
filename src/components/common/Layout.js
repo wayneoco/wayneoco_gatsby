@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { Link, StaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
+import { NavButton } from ".";
 import { Navigation } from ".";
 import config from "../../utils/siteConfig";
 
@@ -18,19 +19,39 @@ import "../../styles/app.css";
  * styles, and meta data for each page.
  *
  */
+
+ const toggleMenu = (e) => {
+    e.preventDefault();
+
+    const navItemsContainer = document.querySelector('.site-nav-items');
+    const navButton = document.querySelector('.site-nav-container button');
+
+    if (!navItemsContainer.classList.contains('mobile')) {
+    navItemsContainer.classList.add('mobile');
+    navButton.classList.replace('site-nav-button', 'site-nav-button-open');
+    document.body.classList.add('no-scroll');
+    document.body.parentElement.classList.replace('scroll', 'no-scroll');
+    } else {
+    navItemsContainer.classList.remove('mobile');
+    navButton.classList.replace('site-nav-button-open', 'site-nav-button');
+    document.body.classList.remove('no-scroll');
+    document.body.parentElement.classList.replace('no-scroll', 'scroll');
+    }
+ };
+
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     const site = data.allGhostSettings.edges[0].node;
     const twitterUrl = site.twitter
         ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}`
         : null;
-    const facebookUrl = site.facebook
-        ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}`
-        : null;
 
     return <>
         <Helmet>
-            <html lang={site.lang} />
+            <html lang={site.lang} className="scroll" />
             <style type="text/css">{`${site.codeinjection_styles}`}</style>
+            <script src="https://kit.fontawesome.com/ad2b643311.js" crossorigin="anonymous"></script>
+            // <link rel="preconnect" href="https://www.google.com" />
+            // <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
             <body className={bodyClass} />
         </Helmet>
 
@@ -39,15 +60,35 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 {/* The main header section on top of the screen */}
                 <header
                     className="site-head"
-                    style={{
-                        ...(site.cover_image && {
-                            backgroundImage: `url(${site.cover_image})`,
-                        }),
-                    }}
                 >
                     <div className="container">
                         <div className="site-mast">
                             <div className="site-mast-left">
+                            </div>
+                            <div className="site-mast-right">
+                                <div className="site-nav-container">
+                                    <button className="site-nav-button" onClick={toggleMenu} />
+                                    <div className="site-nav-items">
+                                        <Navigation
+                                            data={site.navigation}
+                                            navClass="site-nav-item"
+                                        />
+                                        {site.twitter && (
+                                            <a
+                                                href={twitterUrl}
+                                                className="site-nav-item"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <i className="fa-brands fa-twitter"></i>
+                                            </a>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="site-banner">
+                            {isHome ? (
                                 <Link to="/">
                                     {site.logo ? (
                                         <img
@@ -59,77 +100,22 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                         <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt={site.title} />
                                     )}
                                 </Link>
-                            </div>
-                            <div className="site-mast-right">
-                                {site.twitter && (
-                                    <a
-                                        href={twitterUrl}
-                                        className="site-nav-item"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <img
-                                            className="site-nav-icon"
-                                            src="/images/icons/twitter.svg"
-                                            alt="Twitter"
-                                        />
-                                    </a>
-                                )}
-                                {site.facebook && (
-                                    <a
-                                        href={facebookUrl}
-                                        className="site-nav-item"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <img
-                                            className="site-nav-icon"
-                                            src="/images/icons/facebook.svg"
-                                            alt="Facebook"
-                                        />
-                                    </a>
-                                )}
-                                <a
-                                    className="site-nav-item"
-                                    href={`https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <img
-                                        className="site-nav-icon"
-                                        src="/images/icons/rss.svg"
-                                        alt="RSS Feed"
-                                    />
-                                </a>
-                            </div>
+                            ) : null}
+                            <h1 className="site-banner-title">
+                                <Link to="/">
+                                    {site.title}
+                                </Link>
+                            </h1>
                         </div>
                         {isHome ? (
-                            <div className="site-banner">
-                                <h1 className="site-banner-title">
-                                    {site.title}
-                                </h1>
-                                <p className="site-banner-desc">
-                                    {site.description}
-                                </p>
+                            <div className="site-greeting">
+                                <h2>Hi, friend...</h2>
+                                <p className="large">I'm <strong>Wayne</strong>. I'm a software engineering student and a dad of two.</p>
+                                <p>I write about what I'm learning on the path to mastery of programming fundamentals, as well as the journey to making a near mid-life career change into software engineering.</p>
+                                <p>I'd love it if you came along for the ride...</p>
+                                <img src="https://wayneo.co/content/images/2021/12/signature-about.pxd.png" alt="Wayne Olson signature" />
                             </div>
                         ) : null}
-                        <nav className="site-nav">
-                            <div className="site-nav-left">
-                                {/* The navigation items as setup in Ghost */}
-                                <Navigation
-                                    data={site.navigation}
-                                    navClass="site-nav-item"
-                                />
-                            </div>
-                            <div className="site-nav-right">
-                                <Link
-                                    className="site-nav-button"
-                                    to="/about"
-                                >
-                                    About
-                                </Link>
-                            </div>
-                        </nav>
                     </div>
                 </header>
 
@@ -143,9 +129,8 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 {/* The footer at the very bottom of the screen */}
                 <footer className="site-foot">
                     <div className="site-foot-nav container">
-                        <div className="site-foot-nav-left">
-                            <Link to="/">{site.title}</Link> © 2021 &mdash;
-                            Published with{" "}
+                            <Link to="/">{site.title} </Link> © 2022.
+                            Published with {" "}
                             <a
                                 className="site-foot-nav-item"
                                 href="https://ghost.org"
@@ -154,13 +139,15 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             >
                                 Ghost
                             </a>
-                        </div>
-                        <div className="site-foot-nav-right">
-                            <Navigation
-                                data={site.navigation}
-                                navClass="site-foot-nav-item"
-                            />
-                        </div>
+                            &
+                            <a
+                                className="site-foot-nav-item"
+                                href="https://www.gatsbyjs.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Gatsby
+                            </a>.
                     </div>
                 </footer>
             </div>

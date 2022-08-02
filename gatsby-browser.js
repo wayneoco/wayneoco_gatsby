@@ -9,6 +9,8 @@
  * via ids/classnames etc.
  *
  */
+require("prismjs/themes/prism-tomorrow.css");
+
 var trustAllScripts = function () {
     var scriptNodes = document.querySelectorAll('.load-external-scripts script');
 

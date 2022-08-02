@@ -54,7 +54,9 @@ export const ghostPostFields = graphql`
 
         # Dates formatted
         created_at_pretty: created_at(formatString: "DD MMMM, YYYY")
-        published_at_pretty: published_at(formatString: "DD MMMM, YYYY")
+        published_at_pretty: published_at(formatString: "DD MMM YYYY")
+        published_at_short: published_at(formatString: "MMM DD")
+        published_at_year: published_at(formatString: "YYYY")
         updated_at_pretty: updated_at(formatString: "DD MMMM, YYYY")
 
         # Dates unformatted
@@ -117,6 +119,9 @@ export const ghostPostFields = graphql`
         # Content
         plaintext
         html
+        childHtmlRehype {
+            html
+        }
 
         # Additional fields
         url
@@ -145,7 +150,7 @@ export const ghostPageFields = graphql`
 
         # Dates formatted
         created_at_pretty: created_at(formatString: "DD MMMM, YYYY")
-        published_at_pretty: published_at(formatString: "DD MMMM, YYYY")
+        published_at_pretty: published_at(formatString: "DD MMM, YYYY")
         updated_at_pretty: updated_at(formatString: "DD MMMM, YYYY")
 
         # Dates unformatted
@@ -208,6 +213,9 @@ export const ghostPageFields = graphql`
         # Content
         plaintext
         html
+        childHtmlRehype {
+            html
+        }
 
         # Additional fields
         url

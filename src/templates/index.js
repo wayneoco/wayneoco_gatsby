@@ -5,6 +5,11 @@ import { graphql } from "gatsby";
 import { Layout, PostCard, Pagination } from "../components/common";
 import { MetaData } from "../components/common/meta";
 
+const allPosts = (e) => {
+    e.preventDefault();
+    location.href = '/archive';
+};
+
 /**
  * Main index page (home page)
  *
@@ -21,13 +26,22 @@ const Index = ({ data, location, pageContext }) => {
             <MetaData location={location} />
             <Layout isHome={true}>
                 <div className="container">
+                    <h3>Recent Writing...</h3>
                     <section className="post-feed">
                         {posts.map(({ node }) => (
                             // The tag below includes the markup for each post - components/common/PostCard.js
                             <PostCard key={node.id} post={node} />
                         ))}
+                        <div className="all-posts">
+                            <button
+                                type="button"
+                                onClick={allPosts}
+                                value="All Posts"
+                            >
+                                All Posts
+                            </button>
+                        </div>
                     </section>
-                    <Pagination pageContext={pageContext} />
                 </div>
             </Layout>
         </>

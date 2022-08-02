@@ -23,27 +23,32 @@ const hideIcon = (e) => {
     title.style.fontWeight = '300';
 };
 
-const PostCard = ({ post }) => {
+const PostCardArchive = ({ post }) => {
     const url = `/${post.slug}/`;
 
     return (
-        <section className="post-card" data-for={post.slug}>
-            <div className="post-card-icon">
-                <i className="fa-solid fa-angles-right"></i>
+        <section className="post-card-archive" data-for={post.published_at_year}>
+            <div className="post-card-year">
+                <h3>{post.published_at_year}</h3>
             </div>
-            <div className="post-card-title">
-                {post.title}
+            <div className="post-card-data" data-for={post.slug}>
+                <div className="post-card-icon">
+                    <i className="fa-solid fa-angles-right"></i>
+                </div>
+                <div className="post-card-title">
+                    {post.title}
+                </div>
+                <div className="post-card-date">
+                    {post.published_at_short}
+                </div>
+                <Link to={url} className="post-card-link" id={post.slug} onMouseEnter={displayIcon} onMouseLeave={hideIcon} title={post.title}>
+                </Link>
             </div>
-            <div className="post-card-date">
-                {post.published_at_short}
-            </div>
-            <Link to={url} className="post-card-link" id={post.slug} onMouseEnter={displayIcon} onMouseLeave={hideIcon} title={post.title}>
-            </Link>
         </section>
     );
 };
 
-PostCard.propTypes = {
+PostCardArchive.propTypes = {
     post: PropTypes.shape({
         slug: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
@@ -62,4 +67,4 @@ PostCard.propTypes = {
     }).isRequired,
 };
 
-export default PostCard;
+export default PostCardArchive;
