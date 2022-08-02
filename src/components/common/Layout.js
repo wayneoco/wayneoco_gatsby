@@ -56,8 +56,6 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
             <html lang={site.lang} className="scroll" />
             <style type="text/css">{`${site.codeinjection_styles}`}</style>
             <script src="https://kit.fontawesome.com/ad2b643311.js" crossorigin="anonymous"></script>
-            // <link rel="preconnect" href="https://www.google.com" />
-            // <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
             <body className={bodyClass} />
         </Helmet>
 
