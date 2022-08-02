@@ -76,22 +76,6 @@ module.exports = {
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
         {
-            resolve: `gatsby-transformer-rehype`,
-            options: {
-                filter: (node) =>
-                    node.internal.type === `GhostPost` ||
-                    node.internal.type === `GhostPage`,
-                plugins: [
-                    {
-                        resolve: `gatsby-rehype-prismjs`,
-                        options: {
-                            noInlineHighlight: true,
-                        }
-                    },
-                ],
-            },
-        },
-        {
             resolve: `gatsby-source-ghost`,
             options:
                 process.env.NODE_ENV === `development`
