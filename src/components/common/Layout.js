@@ -9,6 +9,8 @@ import { NavButton } from ".";
 import { Navigation } from ".";
 import config from "../../utils/siteConfig";
 
+import signature from "../../images/wayneoco_signature.png";
+
 import Prism from "prismjs";
 
 // Styles
@@ -117,7 +119,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 <p className="large">I'm <strong>Wayne</strong>. I'm a software engineering student and a dad of two.</p>
                                 <p>I write about what I'm learning on the path to mastery of programming fundamentals, as well as the journey to making a near mid-life career change into software engineering.</p>
                                 <p>I'd love it if you came along for the ride...</p>
-                                <img src="https://wayneo.co/content/images/2021/12/signature-about.pxd.png" alt="Wayne Olson signature" />
+                                <img src={signature} alt="Wayne Olson signature" />
                             </div>
                         ) : null}
                     </div>
