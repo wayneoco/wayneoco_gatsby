@@ -716,14 +716,15 @@ h6 {
   font-weight: 700;
 }
 
-.content-body pre {
-  margin: 0.4em 0 1.8em;
-  font-size: 1.6rem;
-  line-height: 1.4em;
-  white-space: pre-wrap;
+pre[class*="language-"] {
   padding: 20px;
-  color: #fff;
   border-radius: 12px;
+}
+
+code[class*="language-"] {
+  font-size: 0.8em;
+  line-height: 1;
+  white-space: pre-wrap;
 }
 
 .content-body p  {
@@ -738,6 +739,10 @@ h6 {
   background-color: #f0f0f0;
   font-size: 0.8em;
   color: #333;
+}
+
+.content-body pre + p {
+  margin-top: 2em;
 }
 
 .content-body .footnotes-sep {
