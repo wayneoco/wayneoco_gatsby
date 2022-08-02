@@ -84,6 +84,9 @@ module.exports = {
                 plugins: [
                     {
                         resolve: `gatsby-rehype-prismjs`,
+                        options: {
+                            noInlineHighlight: true,
+                        }
                     },
                 ],
             },

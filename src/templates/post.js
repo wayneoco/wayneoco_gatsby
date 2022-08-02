@@ -64,7 +64,7 @@ const Post = ({ data, location }) => {
                             {/* The main post content */}
                             <section
                                 className="content-body load-external-scripts"
-                                dangerouslySetInnerHTML={{ __html: post.html }}
+                                dangerouslySetInnerHTML={{ __html: post.childHtmlRehype.html }}
                             />
                         </section>
                         <section className="post-author">
@@ -89,6 +89,9 @@ Post.propTypes = {
             codeinjection_styles: PropTypes.object,
             title: PropTypes.string.isRequired,
             html: PropTypes.string.isRequired,
+            childHtmlRehype: PropTypes.shape({
+                html: PropTypes.string.isRequired,
+            }),
             feature_image: PropTypes.string,
             tags: PropTypes.arrayOf(
                 PropTypes.shape({
