@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { Link, StaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { NavButton } from ".";
 import { Navigation } from ".";
@@ -92,7 +93,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                             >
-                                                <i className="fa-brands fa-twitter"></i>
+                                                <FontAwesomeIcon icon="fa-brands fa-twitter" />
                                             </a>
                                         )}
                                     </div>
