@@ -1456,7 +1456,7 @@ h2.tags {
   margin-top: 30px;
   padding: 20px 0 40px 0;
   color: var(--color-secondary);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   background: var(--color-base);
 }
 
@@ -1468,6 +1468,7 @@ h2.tags {
 }
 
 .site-foot-nav a {
+  font-weight: 400;
   color: #666;
   text-decoration: none;
 }

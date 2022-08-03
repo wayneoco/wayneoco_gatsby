@@ -155,6 +155,9 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 Gatsby
                             </a>.
                     </div>
+                    <div className="site-foot-nav container">
+                        Designed in Portland, OR.
+                    </div>
                 </footer>
             </div>
         </div>
