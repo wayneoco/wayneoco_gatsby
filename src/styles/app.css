@@ -704,12 +704,12 @@ pre[class*="language-"] {
 }
 
 code[class*="language-"] {
-  font-size: 0.7em;
   white-space: pre-wrap;
 }
 
-pre[class*="language-"], code[class*="language-"] {
+code[class*="language-"], pre[class*="language-"] {
   line-height: 1.25;
+  font-size: 0.9em;
 }
 
 .content-body p  {
