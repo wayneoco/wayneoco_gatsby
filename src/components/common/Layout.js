@@ -57,12 +57,9 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     return <>
         <Helmet>
             <html lang={site.lang} className="scroll" />
-            <link rel="stylesheet"
-                href="https://rsms.me/inter/inter.css')"
-            />
-            <link rel="stylesheet"
-              href="https://fonts.googleapis.com/css?family=Vollkorn"
-            />
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
             <style type="text/css">{`${site.codeinjection_styles}`}</style>
             <body className={bodyClass} />
         </Helmet>
