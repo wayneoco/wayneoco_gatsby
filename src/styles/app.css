@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Open+Sans:wght@300;600&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 /* App.css
 /* ---------------------------------------------------------- /*
 
@@ -568,10 +570,6 @@ h6 {
   background: #fff;
 }
 
-.post-full-content h1.content-title {
-  margin-bottom: 0;
-}
-
 .post-feature-image img {
   margin: 0 0 3vw;
   width: 100%;
@@ -632,6 +630,7 @@ h6 {
 
 .post-author-bio {
   margin: 5px 0;
+  font-family: 'Zilla Slab';
   font-size: 0.75em;
   font-weight: 300;
   line-height: 1.5;
@@ -639,7 +638,12 @@ h6 {
   color: #333;
 }
 
-.content-body h1,
+h1.content-title {
+  margin-bottom: 0;
+  font-family: 'Zilla Slab';
+}
+
+/* .content-body h1, */
 .content-body h2,
 .content-body h3,
 .content-body h4,
@@ -661,7 +665,7 @@ h6 {
 
 .content-body h2 {
   margin: 0.8em 0 0.4em 0;
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 @media (max-width: 500px) {
@@ -672,7 +676,7 @@ h6 {
 
 .content-body h3 {
   margin: 0.5em 0 0.2em 0;
-  font-size: 2.8rem;
+  font-size: 2.7rem;
   font-weight: 700;
 }
 @media (max-width: 500px) {
@@ -723,13 +727,17 @@ pre[class*="language-"] {
 }
 
 code[class*="language-"] {
-  font-size: 0.8em;
-  line-height: 1;
+  font-size: 0.7em;
   white-space: pre-wrap;
 }
 
+pre[class*="language-"], code[class*="language-"] {
+  line-height: 1.25;
+}
+
 .content-body p  {
-  font-size: 0.8em;
+  font-family: 'Zilla Slab';
+  font-size: 0.9em;
   font-weight: 300;
   line-height: 1.5;
 }
@@ -987,8 +995,13 @@ code[class*="language-"] {
   font-size: 1.9em;
 }
 
+.site-greeting p {
+  font-family: 'Zilla Slab';
+  font-size: 1.1em;
+}
+
 .site-greeting .large {
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 
 .site-greeting img {
@@ -1032,6 +1045,7 @@ code[class*="language-"] {
   margin: 0 auto;
   padding: 15px 0;
   overflow: hidden;
+  font-family: 'Zilla Slab';
 }
 
 .post-card + .post-card {
@@ -1100,6 +1114,7 @@ code[class*="language-"] {
   background: transparent;
   border: 1px solid #f0f0f0;
   border-radius: 3px;
+  font-family: 'Zilla Slab';
   font-size: 0.6em;
   font-weight: 500;
   letter-spacing: 0.03em;
@@ -1139,6 +1154,7 @@ code[class*="language-"] {
   flex-direction: column;
   align-items: flex-start;
   padding-bottom: 15px;
+  font-family: 'Zilla Slab';
   overflow: hidden;
 }
 
@@ -1226,6 +1242,7 @@ h2.tags {
   padding: 20px;
   background-color: #f6f6f6;
   border-radius: 3px;
+  font-family: 'Zilla Slab';
   font-size: 0.8em;
 }
 
@@ -1256,6 +1273,7 @@ h2.tags {
 }
 
 #contact-form label {
+  font-family: 'Zilla Slab';
   font-size: 0.8em;
   font-weight: 300;
 }
@@ -1456,6 +1474,7 @@ h2.tags {
   margin-top: 30px;
   padding: 20px 0 40px 0;
   color: var(--color-secondary);
+  font-family: 'Zilla Slab';
   font-size: 1.2rem;
   background: var(--color-base);
 }
