@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Open+Sans:wght@300;600&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
 
 /* App.css
 /* ---------------------------------------------------------- /*
@@ -31,8 +37,8 @@ what's here to work the way you'd like it to.
   --color-bg: #f5f5f5;
 
   /* Fonts */
-  --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  --font-serif: Georgia, Times, serif;
+  --font-sans-serif: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --font-serif: Vollkorn, Georgia, Times, serif;
   --font-mono: Menlo, Courier, monospace;
   --font-light: 100;
   --font-normal: 300;
@@ -313,7 +319,7 @@ body {
   margin-right: auto;
   overflow-x: hidden;
   color: #3c484e;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: var(--font-sans-serif);
   font-size: 1.5rem;
   line-height: 1.6em;
   font-weight: 300;
@@ -430,10 +436,11 @@ dd {
 blockquote {
   margin: 0.3em 0 1.8em;
   padding: 0 1.6em 0 1.6em;
-  font-size: 0.75em;
+  font-family: var(--font-serif);
+  font-size: 1em;
   font-weight: 300;
   line-height: 1.5;
-  color: #666;
+  color: #999;
 }
 
 blockquote::before {
@@ -555,14 +562,13 @@ h6 {
 
 .content {
   margin: 0 auto;
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 1.7em;
 }
 
 .content-body {
   display: flex;
   flex-direction: column;
-  font-family: var(--font-sans-serif);
 }
 
 .post-full-content {
@@ -630,7 +636,6 @@ h6 {
 
 .post-author-bio {
   margin: 5px 0;
-  font-family: 'Zilla Slab';
   font-size: 0.75em;
   font-weight: 300;
   line-height: 1.5;
@@ -638,18 +643,13 @@ h6 {
   color: #333;
 }
 
-h1.content-title {
-  margin-bottom: 0;
-  font-family: 'Zilla Slab';
-}
-
-/* .content-body h1, */
+.content-body h1,
 .content-body h2,
 .content-body h3,
 .content-body h4,
 .content-body h5,
 .content-body h6 {
-  font-family: var(--font-sans-serif);
+  font-family: var(--font-serif);
 }
 
 .content-body h1 {
@@ -697,16 +697,9 @@ h1.content-title {
 }
 
 .content-body h5 {
-  display: block;
   margin: 0.5em 0;
-  padding: 1em 0 1.5em;
-  border: 0;
-  font-family: Georgia,serif;
-  color: var(--color-primary);
-  font-style: italic;
   font-size: 3.2rem;
-  line-height: 1.35em;
-  text-align: center;
+  font-weight: 700;
 }
 
 .content-body h6 {
@@ -723,7 +716,7 @@ h1.content-title {
 
 pre[class*="language-"] {
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 4px;
 }
 
 code[class*="language-"] {
@@ -736,7 +729,6 @@ pre[class*="language-"], code[class*="language-"] {
 }
 
 .content-body p  {
-  font-family: 'Zilla Slab';
   font-size: 0.9em;
   font-weight: 300;
   line-height: 1.5;
@@ -751,7 +743,7 @@ pre[class*="language-"], code[class*="language-"] {
 }
 
 .content-body pre + p {
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 .content-body .footnotes-sep {
@@ -996,7 +988,6 @@ pre[class*="language-"], code[class*="language-"] {
 }
 
 .site-greeting p {
-  font-family: 'Zilla Slab';
   font-size: 1.1em;
 }
 
@@ -1045,7 +1036,6 @@ pre[class*="language-"], code[class*="language-"] {
   margin: 0 auto;
   padding: 15px 0;
   overflow: hidden;
-  font-family: 'Zilla Slab';
 }
 
 .post-card + .post-card {
@@ -1153,7 +1143,6 @@ pre[class*="language-"], code[class*="language-"] {
   flex-direction: column;
   align-items: flex-start;
   padding-bottom: 15px;
-  font-family: 'Zilla Slab';
   overflow: hidden;
 }
 
@@ -1241,7 +1230,6 @@ h2.tags {
   padding: 20px;
   background-color: #f6f6f6;
   border-radius: 3px;
-  font-family: 'Zilla Slab';
   font-size: 0.8em;
 }
 
@@ -1272,7 +1260,6 @@ h2.tags {
 }
 
 #contact-form label {
-  font-family: 'Zilla Slab';
   font-size: 0.8em;
   font-weight: 300;
 }
@@ -1473,7 +1460,6 @@ h2.tags {
   margin-top: 30px;
   padding: 20px 0 40px 0;
   color: var(--color-secondary);
-  font-family: 'Zilla Slab';
   font-size: 1.2rem;
   background: var(--color-base);
 }
