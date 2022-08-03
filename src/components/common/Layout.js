@@ -4,13 +4,17 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { Link, StaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+// Prevent fontawesome from dynamically adding its css since we did it manually above
+config.autoAddCss = false;
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { brands } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 
 import { NavButton } from ".";
 import { Navigation } from ".";
-import config from "../../utils/siteConfig";
+import SiteConfig from "../../utils/siteConfig";
 
 import signature from "../../images/wayneoco_sig.png";
 
