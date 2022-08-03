@@ -322,7 +322,7 @@ body {
   font-family: var(--font-sans-serif);
   font-size: 1.5rem;
   line-height: 1.6em;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   letter-spacing: 0;
   text-rendering: optimizeLegibility;
@@ -563,7 +563,7 @@ h6 {
 .content {
   margin: 0 auto;
   font-size: 1.8rem;
-  line-height: 1.7em;
+  line-height: 1.5em;
 }
 
 .content-body {
@@ -731,7 +731,6 @@ pre[class*="language-"], code[class*="language-"] {
 .content-body p  {
   font-size: 0.9em;
   font-weight: 300;
-  line-height: 1.5;
 }
 
 .content-body p code {
@@ -966,15 +965,6 @@ pre[class*="language-"], code[class*="language-"] {
   text-decoration: none;
 }
 
-.site-banner-desc {
-  margin: 5px 0 0 0;
-  padding: 0;
-  font-size: 2.4rem;
-  line-height: 1.3em;
-  opacity: 0.7;
-  max-width: 800px;
-}
-
 .site-greeting {
   margin: 0 auto 50px;
   padding: 10px;
@@ -989,6 +979,7 @@ pre[class*="language-"], code[class*="language-"] {
 
 .site-greeting p {
   font-size: 1.1em;
+  font-weight: 300;
 }
 
 .site-greeting .large {
@@ -1069,6 +1060,7 @@ pre[class*="language-"], code[class*="language-"] {
   overflow: hidden;
   text-overflow: ellipsis;
   transition: margin .1s ease-in-out;
+  font-weight: 300;
 }
 
 .post-card-date {
@@ -1087,7 +1079,6 @@ pre[class*="language-"], code[class*="language-"] {
   right: 0;
   bottom: 0;
   outline: none;
-  font-weight: 300;
   text-decoration: none;
   color: #333;
   z-index: 25;

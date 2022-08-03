@@ -56,6 +56,12 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     return <>
         <Helmet>
             <html lang={site.lang} className="scroll" />
+            <style>
+                @import url('https://rsms.me/inter/inter.css');
+            </style>
+            <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Vollkorn"
+            />
             <style type="text/css">{`${site.codeinjection_styles}`}</style>
             <script src="https://kit.fontawesome.com/ad2b643311.js" crossorigin="anonymous"></script>
             <body className={bodyClass} />
