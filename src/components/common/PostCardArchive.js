@@ -2,6 +2,8 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
 import { Tags } from "@tryghost/helpers-gatsby";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 const displayIcon = (e) => {
     const parent = e.target.parentElement;
@@ -33,7 +35,7 @@ const PostCardArchive = ({ post }) => {
             </div>
             <div className="post-card-data" data-for={post.slug}>
                 <div className="post-card-icon">
-                    <i className="fa-solid fa-angles-right"></i>
+                    <FontAwesomeIcon icon={solid('angles-right')} />
                 </div>
                 <div className="post-card-title">
                     {post.title}

@@ -1019,21 +1019,15 @@ pre[class*="language-"], code[class*="language-"] {
 
 .post-card-icon {
   position: absolute;
+  top: 16px;
   left: 0;
   font-size: 0.7em;
   transform: translateX(-1.5rem);
   transition: transform .1s ease-in-out;
   vertical-align: middle;
+  color: #e50;
   width: 24px;
   height: 24px;
-}
-
-.post-card-icon i {
-  position: absolute;
-  top: 7px;
-  color: #e50;
-  width: 16px;
-  height: 16px;
 }
 
 .post-card-title {
