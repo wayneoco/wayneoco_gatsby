@@ -1,26 +1,17 @@
 import * as React from "react";
-import { useEffect } from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { Link, StaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { Navigation } from ".";
+import SiteConfig from "../../utils/siteConfig";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 // Prevent fontawesome from dynamically adding its css since we did it manually above
 config.autoAddCss = false;
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { brands } from '@fortawesome/fontawesome-svg-core/import.macro';
-
-
-import { NavButton } from ".";
-import { Navigation } from ".";
-import SiteConfig from "../../utils/siteConfig";
-
 import signature from "../../images/wayneoco_sig.png";
-
-import Prism from "prismjs";
-
-// Styles
 import "../../styles/app.css";
 
 /**
@@ -52,9 +43,6 @@ import "../../styles/app.css";
  };
 
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
-    useEffect(() => {
-        Prism.highlightAll();
-     }, []);
     const site = data.allGhostSettings.edges[0].node;
     const twitterUrl = site.twitter
         ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}`

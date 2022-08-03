@@ -1,6 +1,8 @@
 import * as React from "react";
+import { useEffect } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
+import Prism from "prismjs";
 import { Helmet } from "react-helmet";
 import { Link } from "gatsby";
 import { Tags } from "@tryghost/helpers-gatsby";
@@ -16,6 +18,9 @@ import { MetaData } from "../components/common/meta";
  *
  */
 const Post = ({ data, location }) => {
+    useEffect(() => {
+        Prism.highlightAll();
+     }, []);
     const post = data.ghostPost;
     const url = `/${post.slug}/`;
     const readingTime = readingTimeHelper(post);
