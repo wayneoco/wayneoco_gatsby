@@ -1008,6 +1008,7 @@ code[class*="language-"], pre[class*="language-"] {
   position: relative;
   display: flex;
   align-items: flex-start;
+  gap: 15px;
   margin: 0 auto;
   padding: 15px 0;
   overflow: hidden;
@@ -1019,15 +1020,15 @@ code[class*="language-"], pre[class*="language-"] {
 
 .post-card-icon {
   position: absolute;
-  top: 16px;
+  top: 15px;
   left: 0;
   font-size: 0.7em;
-  transform: translateX(-1.5rem);
+  transform: translateX(-2rem);
   transition: transform .1s ease-in-out;
   vertical-align: middle;
   color: #e50;
-  width: 24px;
-  height: 24px;
+  width: 12px;
+  height: 12px;
 }
 
 .post-card-title {
@@ -1131,21 +1132,15 @@ code[class*="language-"], pre[class*="language-"] {
 
 .post-card-data .post-card-icon {
   position: absolute;
+  top: 15px;
   left: 0;
   font-size: 0.7em;
-  transform: translateX(-1.5rem);
+  transform: translateX(-2rem);
   transition: transform .1s ease-in-out;
   vertical-align: middle;
-  width: 24px;
-  height: 24px;
-}
-
-.post-card-data .post-card-icon i {
-  position: absolute;
-  top: 7px;
   color: #e50;
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
 }
 
 .post-card-data .post-card-title {
