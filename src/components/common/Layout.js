@@ -109,7 +109,12 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 <p className="large">I'm <strong>Wayne</strong>. I'm a software engineering student and a dad of two.</p>
                                 <p>I write about what I'm learning on the path to mastery of programming fundamentals, as well as the journey to making a near mid-life career change into software engineering.</p>
                                 <p>I'd love it if you came along for the ride...</p>
-                                <img src={signature} alt="Wayne Olson signature" />
+                                <img
+                                    src={signature}
+                                    alt="Wayne Olson signature"
+                                    width='127'
+                                    height='60'
+                                />
                             </div>
                         ) : null}
                     </div>
