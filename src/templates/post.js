@@ -11,6 +11,9 @@ import { readingTime as readingTimeHelper } from "@tryghost/helpers";
 import { Layout } from "../components/common";
 import { MetaData } from "../components/common/meta";
 
+import { Comments } from '../components/Comments'
+import { appendComments } from '../utils/helpers'
+
 /**
  * Single post view (/:slug)
  *
@@ -24,6 +27,11 @@ const Post = ({ data, location }) => {
     const post = data.ghostPost;
     const url = `/${post.slug}/`;
     const readingTime = readingTimeHelper(post);
+    const commentBox = React.createRef();
+
+    useEffect(() => {
+        appendComments(commentBox)
+      }, [commentBox]);
 
     return (
         <>
@@ -82,6 +90,10 @@ const Post = ({ data, location }) => {
                             </div>
                         </section>
                     </article>
+                    <section id="comments" className="segment comments">
+                        <h3>Comments</h3>
+                        <Comments commentBox={commentBox} />
+                    </section>
                 </div>
             </Layout>
         </>

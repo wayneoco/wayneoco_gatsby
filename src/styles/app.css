@@ -752,6 +752,17 @@ code[class*="language-"], pre[class*="language-"] {
   font-weight: 300;
 }
 
+#comments {
+  margin-top: 70px;
+}
+
+#comments h3 {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: left;
+}
+
 /* Header
 /* ---------------------------------------------------------- */
 
