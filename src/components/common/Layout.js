@@ -4,8 +4,8 @@ import { Helmet } from "react-helmet";
 import { Link, StaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Navigation } from ".";
+import { Greeting } from "../Greeting";
 import config from "../../utils/siteConfig";
-import signature from "../../images/wayneoco_sig.png";
 import "../../styles/app.css";
 
 /**
@@ -104,18 +104,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             </h1>
                         </div>
                         {isHome ? (
-                            <div className="site-greeting">
-                                <h2>Hi, friend...</h2>
-                                <p className="large">I'm <strong>Wayne</strong>. I'm a software engineering student and a dad of two.</p>
-                                <p>I write about what I'm learning on the path to mastery of programming fundamentals, as well as the journey to making a near mid-life career change into software engineering.</p>
-                                <p>I'd love it if you came along for the ride...</p>
-                                <img
-                                    src={signature}
-                                    alt="Wayne Olson signature"
-                                    width='127'
-                                    height='60'
-                                />
-                            </div>
+                            <Greeting />
                         ) : null}
                     </div>
                 </header>
