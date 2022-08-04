@@ -89,6 +89,8 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                             className="site-logo"
                                             src={site.logo}
                                             alt={site.title}
+                                            width='128'
+                                            height='128'
                                         />
                                     ) : (
                                         <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt={site.title} />
