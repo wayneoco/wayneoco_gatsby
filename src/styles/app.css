@@ -1276,6 +1276,10 @@ h2.tags {
   color: #333;
 }
 
+#contact-form iframe {
+  max-height: 78px;
+}
+
 .input-group {
   display: flex;
   flex-direction: column;

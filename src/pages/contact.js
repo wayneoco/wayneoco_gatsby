@@ -61,6 +61,7 @@ export default class Contact extends React.Component {
                                     </textarea>
                                 </div>
                                 <ReCAPTCHA
+                                    className="recaptcha"
                                     sitekey="6LelwCMhAAAAAPa4tyZX3HxI3HcuEx2HyXaNjT3F"
                                     ref={this.captchaRef}
                                 />
