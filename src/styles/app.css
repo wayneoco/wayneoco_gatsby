@@ -744,10 +744,6 @@ code[class*="language-"], pre[class*="language-"] {
   color: #333;
 }
 
-.content-body .footnotes {
-  font-size: 1.1em;
-}
-
 .content-body .footnotes li::marker {
   font-size: 0.8em;
   font-weight: 300;
