@@ -38,7 +38,7 @@ export default Archive;
 
 export const archiveQuery = graphql`
     query ArchiveGhostPostQuery {
-        allGhostPost {
+        allGhostPost(sort: {order: DESC, fields: published_at}) {
             edges {
                 node {
                     ...GhostPostFields
