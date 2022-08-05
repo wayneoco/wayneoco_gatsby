@@ -733,7 +733,7 @@ code[class*="language-"], pre[class*="language-"] {
 .content-body .footnotes-sep {
   display: flex;
   justify-content: center;
-  margin: 30px auto;
+  margin: 10px auto;
   border: none;
   height: 50px;
 }
@@ -747,6 +747,14 @@ code[class*="language-"], pre[class*="language-"] {
 .content-body .footnotes li::marker {
   font-size: 0.8em;
   font-weight: 300;
+}
+
+.content-body .footnotes li {
+  font-size: 0.9em;
+}
+
+.footnote-backref {
+  font-size: 0.8em;
 }
 
 #comments {
