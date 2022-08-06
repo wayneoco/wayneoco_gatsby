@@ -76,6 +76,7 @@ public
 yarn-error.log
 .netlify/
 
-# Local Netlify folder
+# Local configuration folders
 .netlify
 .vercel
+.nova
