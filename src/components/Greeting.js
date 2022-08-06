@@ -7,7 +7,7 @@ export const Greeting = () => {
             <h2>Hi, friend...</h2>
             <p className="large">I'm <strong>Wayne</strong>&mdash; a software engineer and dad of two.</p>
             <p>I write about about software development, as well as the journey to making a near mid-life career change into software engineering.</p>
-            <p>Some of the languages and frameworks I have experience with are JavaScript (ES6), Node.js, React, GraphQL, jQuery, Ruby, Sinatra, PostgreSQL, and Handlebars.js.</p>
+            <p>Some of the languages and frameworks I have experience with are JavaScript (ES6), Node.js, React, jQuery, Handlebars.js, Ruby, Sinatra, PostgreSQL, and GraphQL.</p>
             <p>See you on the inside...</p>
             <img
                 src={signature}
