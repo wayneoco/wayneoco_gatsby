@@ -120,7 +120,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 <footer className="site-foot">
                     <div className="site-foot-nav container">
                             <Link to="/">{site.title} </Link> © 2022.
-                            Published with {" "}
+                            Published with&nbsp;
                             <a
                                 className="site-foot-nav-item"
                                 href="https://ghost.org"
@@ -137,7 +137,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             >
                                 Gatsby
                             </a>
-                            & &nbsp;
+                            &nbsp;&&nbsp;
                             <a
                                 className="site-foot-nav-item"
                                 href="https://vercel.com"
