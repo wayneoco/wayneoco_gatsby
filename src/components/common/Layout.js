@@ -128,7 +128,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 rel="noopener noreferrer"
                             >
                                 Ghost
-                            </a>,
+                            </a>,&nbsp;
                             <a
                                 className="site-foot-nav-item"
                                 href="https://www.gatsbyjs.com"
@@ -137,7 +137,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             >
                                 Gatsby
                             </a>
-                            &
+                            & &nbsp;
                             <a
                                 className="site-foot-nav-item"
                                 href="https://vercel.com"

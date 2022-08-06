@@ -1453,7 +1453,6 @@ h2.tags {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3px;
 }
 
 .site-foot-nav a {
