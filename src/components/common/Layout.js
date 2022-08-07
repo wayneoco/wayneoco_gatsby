@@ -5,6 +5,7 @@ import { Link, StaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Navigation } from ".";
 import { Greeting } from "../Greeting";
+import { TwitterIcon } from "../../images/twitter-icon.js";
 import config from "../../utils/siteConfig";
 import "../../styles/app.css";
 
@@ -74,7 +75,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                             >
-                                                <img alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMjAiIGhlaWdodD0iMjAiCnZpZXdCb3g9IjAgMCAzMCAzMCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij4gICAgPHBhdGggZD0iTTI4LDYuOTM3Yy0wLjk1NywwLjQyNS0xLjk4NSwwLjcxMS0zLjA2NCwwLjg0YzEuMTAyLTAuNjYsMS45NDctMS43MDUsMi4zNDUtMi45NTFjLTEuMDMsMC42MTEtMi4xNzIsMS4wNTUtMy4zODgsMS4yOTUgYy0wLjk3My0xLjAzNy0yLjM1OS0xLjY4NS0zLjg5My0xLjY4NWMtMi45NDYsMC01LjMzNCwyLjM4OS01LjMzNCw1LjMzNGMwLDAuNDE4LDAuMDQ4LDAuODI2LDAuMTM4LDEuMjE1IGMtNC40MzMtMC4yMjItOC4zNjMtMi4zNDYtMTAuOTk1LTUuNTc0QzMuMzUxLDYuMTk5LDMuMDg4LDcuMTE1LDMuMDg4LDguMDk0YzAsMS44NSwwLjk0MSwzLjQ4MywyLjM3Miw0LjQzOSBjLTAuODc0LTAuMDI4LTEuNjk3LTAuMjY4LTIuNDE2LTAuNjY3YzAsMC4wMjMsMCwwLjA0NCwwLDAuMDY3YzAsMi41ODUsMS44MzgsNC43NDEsNC4yNzksNS4yMyBjLTAuNDQ3LDAuMTIyLTAuOTE5LDAuMTg3LTEuNDA2LDAuMTg3Yy0wLjM0MywwLTAuNjc4LTAuMDM0LTEuMDAzLTAuMDk1YzAuNjc5LDIuMTE5LDIuNjQ5LDMuNjYyLDQuOTgzLDMuNzA1IGMtMS44MjUsMS40MzEtNC4xMjUsMi4yODQtNi42MjUsMi4yODRjLTAuNDMsMC0wLjg1NS0wLjAyNS0xLjI3My0wLjA3NWMyLjM2MSwxLjUxMyw1LjE2NCwyLjM5Niw4LjE3NywyLjM5NiBjOS44MTIsMCwxNS4xNzYtOC4xMjgsMTUuMTc2LTE1LjE3N2MwLTAuMjMxLTAuMDA1LTAuNDYxLTAuMDE1LTAuNjlDMjYuMzgsOC45NDUsMjcuMjg1LDguMDA2LDI4LDYuOTM3eiI+PC9wYXRoPjwvc3ZnPg=="/>
+                                                <TwitterIcon />
                                             </a>
                                         )}
                                     </div>
@@ -118,11 +119,11 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
             <div className="viewport-bottom">
                 {/* The footer at the very bottom of the screen */}
                 <footer className="site-foot">
-                    <div className="site-foot-nav container">
+                    <div className="site-foot-row">
                             <Link to="/">{site.title}</Link>&nbsp;©&nbsp;2022.&nbsp;
-                            Published with&nbsp;
+                            Built with&nbsp;
                             <a
-                                className="site-foot-nav-item"
+                                className="site-foot-row-item"
                                 href="https://ghost.org"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -130,7 +131,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 Ghost
                             </a>,&nbsp;
                             <a
-                                className="site-foot-nav-item"
+                                className="site-foot-row-item"
                                 href="https://www.gatsbyjs.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -139,7 +140,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             </a>
                             &nbsp;&&nbsp;
                             <a
-                                className="site-foot-nav-item"
+                                className="site-foot-row-item"
                                 href="https://vercel.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -147,7 +148,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 Vercel
                             </a>.
                     </div>
-                    <div className="site-foot-nav container">
+                    <div className="site-foot-row">
                         Designed in Portland, OR.
                     </div>
                 </footer>

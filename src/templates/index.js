@@ -25,7 +25,7 @@ const Index = ({ data, location, pageContext }) => {
         <>
             <MetaData location={location} />
             <Layout isHome={true}>
-                <div className="container">
+                <div className="container recent-writing">
                     <h3>Recent Writing...</h3>
                     <section className="post-feed">
                         {posts.map(({ node }) => (

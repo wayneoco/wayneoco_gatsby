@@ -492,7 +492,7 @@ h1 {
 
 h2 {
   margin: 1.5em 0 0.5em 0;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 @media (max-width: 500px) {
   h2 {
@@ -513,20 +513,21 @@ h3 {
 
 h4 {
   margin: 1.5em 0 0.5em 0;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 500;
 }
 
 h5 {
   margin: 1.5em 0 0.5em 0;
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
 h6 {
   margin: 1.5em 0 0.5em 0;
-  font-size: 1.4rem;
+  font-size: 0.8rem;
   font-weight: 500;
+  text-transform: uppercase;
 }
 
 /* Layout
@@ -661,7 +662,7 @@ h6 {
 
 .content-body h3 {
   margin: 0.5em 0 0.2em 0;
-  font-size: 2.7rem;
+  font-size: 2.6rem;
   font-weight: 700;
 }
 @media (max-width: 500px) {
@@ -672,7 +673,7 @@ h6 {
 
 .content-body h4 {
   margin: 0.5em 0 0.2em 0;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 @media (max-width: 500px) {
@@ -683,13 +684,13 @@ h6 {
 
 .content-body h5 {
   margin: 0.5em 0;
-  font-size: 3.2rem;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
 .content-body h6 {
   margin: 0.5em 0 0.2em 0;
-  font-size: 2.0rem;
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
@@ -710,7 +711,7 @@ code[class*="language-"] {
 
 code[class*="language-"], pre[class*="language-"] {
   line-height: 1.25;
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
 
 .content-body p  {
@@ -1000,7 +1001,7 @@ code[class*="language-"], pre[class*="language-"] {
   padding: 1vw 0;
 }
 
-.site-main h3 {
+.site-main .recent-writing h3 {
   margin: 0 auto 1.5em;
   font-size: 1em;
   text-align: center;
@@ -1449,19 +1450,21 @@ h2.tags {
   background: var(--color-base);
 }
 
-.site-foot-nav {
+.site-foot-row {
   display: flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
+  margin-bottom: 0;
 }
 
-.site-foot-nav a {
+.site-foot-row a {
   font-weight: 400;
   color: #666;
   text-decoration: none;
 }
 
-.site-foot-nav a:hover {
+.site-foot-row a:hover {
   text-decoration: none;
   color: #333;
 }

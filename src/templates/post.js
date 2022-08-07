@@ -1,18 +1,19 @@
 import * as React from "react";
 import { useEffect } from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Prism from "prismjs";
 import { Helmet } from "react-helmet";
-import { Link } from "gatsby";
 import { Tags } from "@tryghost/helpers-gatsby";
 import { readingTime as readingTimeHelper } from "@tryghost/helpers";
 
 import { Layout } from "../components/common";
 import { MetaData } from "../components/common/meta";
 
-import { Comments } from '../components/Comments'
-import { appendComments } from '../utils/helpers'
+import { Comments } from '../components/Comments';
+import { appendComments } from '../utils/helpers';
+
+import "../styles/prism-one-light.css";
 
 /**
  * Single post view (/:slug)
