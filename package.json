@@ -10,7 +10,7 @@
     "url": "git+https://github.com/tryghost/gatsby-starter-ghost.git"
   },
   "engines": {
-    "node": ">= 12.13.0"
+    "node": "^12.13.0 || ^14.0.0 || ^16.0.0"
   },
   "bugs": {
     "url": "https://github.com/tryghost/gatsby-starter-ghost/issues"
@@ -32,6 +32,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@tryghost/helpers-gatsby": "^2.0.4",
     "babel-eslint": "10.1.0",
     "eslint": "8.20.0",
     "eslint-plugin-ghost": "2.14.0",
@@ -39,12 +40,12 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
-    "@tryghost/helpers": "1.1.71",
-    "@tryghost/helpers-gatsby": "2.0.1",
+    "@tryghost/helpers": "^1.1.71",
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-prismjs": "^2.1.0",
     "babel-preset-gatsby": "^2.19.0",
     "cheerio": "1.0.0-rc.11",
+    "dotenv": "^16.0.3",
     "gatsby": "^4.20.0",
     "gatsby-awesome-pagination": "0.3.8",
     "gatsby-plugin-advanced-sitemap": "2.1.0",

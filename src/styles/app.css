@@ -944,6 +944,13 @@ code[class*="language-"], pre[class*="language-"] {
   text-decoration: none;
 }
 
+.site-nav-item-social {
+  display: inline-block;
+  margin: 5px 0 0 15px;
+  padding-bottom: 2px;
+  color: #333;
+}
+
 .site-logo {
   height: 25px;
 }
@@ -1125,11 +1132,16 @@ code[class*="language-"], pre[class*="language-"] {
   text-transform: uppercase;
   text-decoration: none;
   color: #333;
-  width: 100px;
+  /* width: 100px; */
 }
 
 .all-posts button:hover {
   border-color: #ccc;
+}
+
+.all-posts a {
+  text-decoration: none;
+  color: #333;
 }
 
 /* Archive

@@ -10,8 +10,8 @@ import { readingTime as readingTimeHelper } from "@tryghost/helpers";
 import { Layout } from "../components/common";
 import { MetaData } from "../components/common/meta";
 
-import { Comments } from '../components/Comments';
-import { appendComments } from '../utils/helpers';
+import { Comments } from "../components/Comments";
+import { appendComments } from "../utils/helpers";
 
 import "../styles/prism-one-light.css";
 
@@ -24,15 +24,15 @@ import "../styles/prism-one-light.css";
 const Post = ({ data, location }) => {
     useEffect(() => {
         Prism.highlightAll();
-     }, []);
+    }, []);
     const post = data.ghostPost;
     const url = `/${post.slug}/`;
     const readingTime = readingTimeHelper(post);
     const commentBox = React.createRef();
 
     useEffect(() => {
-        appendComments(commentBox)
-      }, [commentBox]);
+        appendComments(commentBox);
+    }, [commentBox]);
 
     return (
         <>
@@ -58,7 +58,8 @@ const Post = ({ data, location }) => {
                             <section className="post-meta">
                                 <div className="post-meta-upper">
                                     <div className="post-published-date">
-                                        {post.published_at_pretty} &mdash; {readingTime}
+                                        {post.published_at_pretty} &mdash;{" "}
+                                        {readingTime}
                                     </div>
                                 </div>
                                 <div className="post-meta-lower">
@@ -83,11 +84,18 @@ const Post = ({ data, location }) => {
                         </section>
                         <section className="post-author">
                             <div className="post-author-media">
-                                <img src={post.primary_author.profile_image} alt={post.primary_author.name} />
+                                <img
+                                    src={post.primary_author.profile_image}
+                                    alt={post.primary_author.name}
+                                />
                             </div>
                             <div className="post-author-content">
-                                <h4 className="post-author-name">{post.primary_author.name}</h4>
-                                <p className="post-author-bio">{post.primary_author.bio}</p>
+                                <h4 className="post-author-name">
+                                    {post.primary_author.name}
+                                </h4>
+                                <p className="post-author-bio">
+                                    {post.primary_author.bio}
+                                </p>
                             </div>
                         </section>
                     </article>
